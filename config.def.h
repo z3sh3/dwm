@@ -108,6 +108,7 @@ static char        dmenumon[2] = "0"; /* component of dmenucmd, manipulated in s
 static const char *dmenucmd[]  = {"dmenu_run", "-m", dmenumon, NULL};
 static const char *termcmd[]   = {"alacritty", NULL};
 static const char *browser[]   = {"firefox", NULL};
+static const char *locker[]    = {"slock", NULL};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -120,15 +121,16 @@ static const Key keys[] = {
     {MODKEY,             XK_k,                     focusstack,     {.i = -1}                 },
     {MODKEY,             XK_i,                     incnmaster,     {.i = +1}                 },
     {MODKEY,             XK_d,                     incnmaster,     {.i = -1}                 },
-    {MODKEY,             XK_h,                     setmfact,       {.f = -0.05}              },
-    {MODKEY,             XK_l,                     setmfact,       {.f = +0.05}              },
+    {MODKEY,             XK_bracketleft,           setmfact,       {.f = -0.05}              },
+    {MODKEY,             XK_bracketright,          setmfact,       {.f = +0.05}              },
     {MODKEY,             XK_Return,                zoom,           {0}                       },
     {MODKEY,             XK_Tab,                   view,           {0}                       },
     {MODKEY | ShiftMask, XK_k,                     killclient,     {0}                       },
     {MODKEY,             XK_m,                     setlayout,      {.v = &layouts[0]}        },
     {MODKEY,             XK_t,                     setlayout,      {.v = &layouts[1]}        },
     {MODKEY,             XK_f,                     setlayout,      {.v = &layouts[2]}        },
-    {MODKEY,             XK_space,                 setlayout,      {0}                       },
+    {MODKEY,             XK_o,                     setlayout,      {0}                       },
+    {MODKEY,             XK_space,                 spawn,          SHCMD("j4-dmenu-desktop") },
     {MODKEY | ShiftMask, XK_space,                 togglefloating, {0}                       },
     {MODKEY,             XK_0,                     view,           {.ui = ~0}                },
     {MODKEY | ShiftMask, XK_0,                     tag,            {.ui = ~0}                },
@@ -152,6 +154,7 @@ static const Key keys[] = {
     {MODKEY,             XK_e,                     spawn,          SHCMD("thunar")           },
     {MODKEY,             XK_c,                     spawn,          SHCMD("flameshot gui")    },
     {MODKEY,             XK_p,                     spawn,          SHCMD("screenshot.sh")    },
+    {MODKEY,             XK_l,                     spawn,          {.v = locker}             },
     {MODKEY | ShiftMask, XK_q,                     quit,           {0}                       },
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3) TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5)
         TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7) TAGKEYS(XK_9, 8)
