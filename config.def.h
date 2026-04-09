@@ -150,7 +150,7 @@ static const Key keys[] = {
     {0,                  XF86XK_AudioMute,         spawn,          SHCMD("toggle_mute.sh")   },
     {MODKEY,             XK_F9,                    spawn,          SHCMD("notify-sysinfo.sh")},
     {MODKEY,             XK_F12,                   spawn,          SHCMD("sysops.sh")        },
-    {MODKEY,             XK_a,                     spawn,          SHCMD("switchtag.sh")     },
+    {MODKEY,             XK_a,                     spawn,          SHCMD("jumpwindow.sh")     },
     {MODKEY,             XK_e,                     spawn,          SHCMD("thunar")           },
     {MODKEY,             XK_c,                     spawn,          SHCMD("flameshot gui")    },
     {MODKEY,             XK_p,                     spawn,          SHCMD("screenshot.sh")    },
