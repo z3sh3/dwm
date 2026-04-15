@@ -19,7 +19,7 @@ static const char *fonts[] = {
 static const char         col_gray1[] = "#222222";
 static const char         col_gray2[] = "#444444";
 static const char         col_gray3[] = "#868e96";
-static const char         col_gray4[] = "#adb5bd";
+static const char         col_gray4[] = "#a9b7c6";
 static const char         col_cyan[]  = "#1c1b22";
 static const unsigned int baralpha    = 0xee;
 static const unsigned int borderalpha = OPAQUE;
@@ -36,7 +36,8 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"1 ", "2 󰇧", "3 󰘝", "4 ", "5 󰭹", "6 󰊖", "7 ", "8 󰒃", "9 󱘖"};
+// static const char *tags[] = {"1 ", "2 󰇧", "3 󰘝", "4 ", "5 󰭹", "6 󰊖", "7 ", "8 󰒃", "9 󱘖"};
+static const char *tags[] = {"", "󰖟", "󰘝", "", "󰭹", "󰺵", "", "󰒃", "󱘖"};
 
 static const char ptagf[]  = "%s %s"; /* format of a tag label */
 static const char etagf[]  = "[%s]";  /* format of an empty tag */
