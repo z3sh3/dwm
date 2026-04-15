@@ -828,9 +828,12 @@ drawbar(Monitor *m)
 		if (!(occ & 1 << i || m->tagset[m->seltags] & 1 << i))
 		continue;
 
-		if (masterclientontag[i])
-			snprintf(tagdisp, 64, ptagf, tags[i], masterclientontag[i]);
-		else
+		if (masterclientontag[i]) {
+			if (m->tagset[m->seltags] & 1 << i)
+				snprintf(tagdisp, 64, ptagf, tags[i], masterclientontag[i]);
+			else
+				snprintf(tagdisp, 64, ntagf, tags[i]);
+		} else
 			snprintf(tagdisp, 64, etagf, tags[i]);
 		masterclientontag[i] = tagdisp;
 		tagw[i] = w = TEXTW(masterclientontag[i]);

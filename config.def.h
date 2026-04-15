@@ -36,10 +36,11 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+static const char *tags[] = {"1 ", "2 󰇧", "3 󰘝", "4 ", "5 󰭹", "6 󰊖", "7 ", "8 󰒃", "9 󱘖"};
 
 static const char ptagf[]  = "%s %s"; /* format of a tag label */
 static const char etagf[]  = "[%s]";  /* format of an empty tag */
+static const char ntagf[]  = "%s";    /* format of a non-empty non-selected tag */
 static const int  lcaselbl = 0;       /* 1 means make tag label lowercase */
 
 static const unsigned int ulinepad     = 5; /* horizontal padding between the underline and tag */
@@ -68,6 +69,7 @@ static const Rule rules[] = {
     {"jetbrains-studio",        NULL, NULL, 1 << 5, 0, -1},
     {"jetbrains-idea",          NULL, NULL, 1 << 5, 0, -1},
     {"Code",                    NULL, NULL, 1 << 5, 0, -1},
+    {"Lutris",                  NULL, NULL, 1 << 5, 0, -1},
     {"wemeetapp",               NULL, NULL, 1 << 6, 0, -1},
     {"Virt-manager",            NULL, NULL, 1 << 6, 0, -1},
     {"KeePassXC",               NULL, NULL, 1 << 7, 0, -1},

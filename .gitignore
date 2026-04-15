@@ -4,3 +4,4 @@ dwm-msg
 *.o
 *.orig
 *.rej
+/tags
