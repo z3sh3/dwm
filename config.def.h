@@ -37,10 +37,10 @@ static const unsigned int alphas[][3] = {
 
 /* tagging */
 // static const char *tags[] = {"1 ", "2 󰇧", "3 󰘝", "4 ", "5 󰭹", "6 󰊖", "7 ", "8 󰒃", "9 󱘖"};
-static const char *tags[] = {"", "󰖟", "󰘝", "", "󰭹", "󰺵", "", "󰒃", "󱘖"};
+static const char *tags[] = {"", "󰖟", "", "", "󰭹", "", "", "󰒃", "󱘖"};
 
 static const char ptagf[]  = "%s %s"; /* format of a tag label */
-static const char etagf[]  = "[%s]";  /* format of an empty tag */
+static const char etagf[]  = "(%s)";  /* format of an empty tag */
 static const char ntagf[]  = "%s";    /* format of a non-empty non-selected tag */
 static const int  lcaselbl = 0;       /* 1 means make tag label lowercase */
 
@@ -62,6 +62,7 @@ static const Rule rules[] = {
     {"eudic",                   NULL, NULL, 1 << 2, 0, -1},
     {"Localsend",               NULL, NULL, 1 << 2, 0, -1},
     {"Zathura",                 NULL, NULL, 1 << 3, 0, -1},
+    {"calibre",                 NULL, NULL, 1 << 3, 0, -1},
     {"Foliate",                 NULL, NULL, 1 << 3, 0, -1},
     {"wechat",                  NULL, NULL, 1 << 4, 0, -1},
     {"org.mozilla.Thunderbird", NULL, NULL, 1 << 4, 0, -1},
