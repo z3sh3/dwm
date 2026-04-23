@@ -839,8 +839,6 @@ drawbar(Monitor *m)
 		tagw[i] = w = TEXTW(masterclientontag[i]);
 		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
 		drw_text(drw, x, 0, w, bh, lrpad / 2, masterclientontag[i], urg & 1 << i);
-		if (ulineall || m->tagset[m->seltags] & 1 << i) 
-            drw_rect(drw, x + ulinepad, bh - ulinestroke - ulinevoffset, w - (ulinepad * 2), ulinestroke, 1, 0);
 		x += w;
 	}
 	w = TEXTW(m->ltsymbol);
@@ -1251,8 +1249,11 @@ monocle(Monitor *m)
 	Client *c;
 
 	for (c = m->clients; c; c = c->next)
-		if (ISVISIBLE(c))
+		if (ISVISIBLE(c)) {
+            c->isfloating = 0;
+            resize(c, m->mx, m->my, m->mw, m->mh, 0);
 			n++;
+        }
 	if (n > 0) /* override layout symbol */
 		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
 	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
