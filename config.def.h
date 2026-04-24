@@ -40,7 +40,7 @@ static const unsigned int alphas[][3] = {
 static const char *tags[] = {"", "󰖟", "", "", "󰭹", "", "", "󰒃", "󱘖"};
 
 static const char ptagf[]  = "%s %s"; /* format of a tag label */
-static const char etagf[]  = "%s";  /* format of an empty tag */
+static const char etagf[]  = "%s";    /* format of an empty tag */
 static const char ntagf[]  = "%s";    /* format of a non-empty non-selected tag */
 static const int  lcaselbl = 0;       /* 1 means make tag label lowercase */
 
@@ -122,7 +122,7 @@ static const Key keys[] = {
     {MODKEY,             XK_d,                     incnmaster,     {.i = -1}                 },
     {MODKEY,             XK_bracketleft,           setmfact,       {.f = -0.05}              },
     {MODKEY,             XK_bracketright,          setmfact,       {.f = +0.05}              },
-    {MODKEY,             XK_Return,                zoom,           {0}                       },
+    {MODKEY,             XK_z,                     zoom,           {0}                       },
     {MODKEY,             XK_Tab,                   view,           {0}                       },
     {MODKEY | ShiftMask, XK_k,                     killclient,     {0}                       },
     {MODKEY,             XK_m,                     setlayout,      {.v = &layouts[0]}        },
@@ -138,6 +138,8 @@ static const Key keys[] = {
     {MODKEY | ShiftMask, XK_comma,                 tagmon,         {.i = -1}                 },
     {MODKEY | ShiftMask, XK_period,                tagmon,         {.i = +1}                 },
     {MODKEY | ShiftMask, XK_f,                     togglefullscr,  {0}                       },
+    {MODKEY,             XK_w,                     resetwindow,    {0}                       },
+    {MODKEY,             XK_Up,                    resetwindow,    {0}                       },
     {0,                  XF86XK_MonBrightnessDown, spawn,          SHCMD("bright_down.sh")   },
     {MODKEY,             XK_F1,                    spawn,          SHCMD("bright_down.sh")   },
     {0,                  XF86XK_MonBrightnessUp,   spawn,          SHCMD("bright_up.sh")     },

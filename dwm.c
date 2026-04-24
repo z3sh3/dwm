@@ -264,6 +264,7 @@ static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void xinitvisual();
 static void zoom(const Arg *arg);
+static void resetwindow(const Arg *arg);
 
 /* variables */
 static const char autostartblocksh[] = "autostart_blocking.sh";
@@ -1250,8 +1251,6 @@ monocle(Monitor *m)
 
 	for (c = m->clients; c; c = c->next)
 		if (ISVISIBLE(c)) {
-            c->isfloating = 0;
-            resize(c, m->mx, m->my, m->mw, m->mh, 0);
 			n++;
         }
 	if (n > 0) /* override layout symbol */
@@ -2486,6 +2485,14 @@ zoom(const Arg *arg)
 	if (c == nexttiled(selmon->clients) && !(c = nexttiled(c->next)))
 		return;
 	pop(c);
+}
+
+void
+resetwindow(const Arg *arg) {
+	Client *c = selmon->sel;
+	if (!c) return;
+	c->isfloating = 0;
+	arrange(selmon);
 }
 
 int
