@@ -11,6 +11,7 @@ static const int          topbar   = 1; /* 0 means bottom bar */
 // use font original name instead of fontconfig alias
 /* emoji font must be at the second place to take effect!!! */
 static const char *fonts[] = {
+    "TsangerYunHei:size=10",
     "Noto Sans:size=10",
     "Noto Color Emoji:size=10",
     "Arimo Nerd Font:size=10",
