@@ -66,6 +66,7 @@ static const Rule rules[] = {
     {"Code",                    NULL, NULL, 1 << 5, 0, -1},
     {"Lutris",                  NULL, NULL, 1 << 5, 0, -1},
     {"gamescope",               NULL, NULL, 1 << 5, 0, -1},
+    {"explorer.exe",            NULL, NULL, 1 << 5, 0, -1},
     {"wemeetapp",               NULL, NULL, 1 << 6, 0, -1},
     {"Virt-manager",            NULL, NULL, 1 << 6, 0, -1},
     {"winboat",                 NULL, NULL, 1 << 6, 0, -1},
