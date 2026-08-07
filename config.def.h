@@ -11,11 +11,8 @@ static const int          topbar   = 1; /* 0 means bottom bar */
 // use font original name instead of fontconfig alias
 /* emoji font must be at the second place to take effect!!! */
 static const char *fonts[] = {
-    "Noto Sans:size=10",
-    "TsangerYunHei:size=10",
-    "Noto Color Emoji:size=10",
-    "Arimo Nerd Font:size=10",
-    "Noto Sans SC:size=10",
+    "Noto Sans:size=10",       "TsangerYunHei:size=10", "Noto Color Emoji:size=10",
+    "Arimo Nerd Font:size=10", "Noto Sans SC:size=10",
 };
 static const char         col_gray1[] = "#222222";
 static const char         col_gray2[] = "#444444";
@@ -57,7 +54,7 @@ static const Rule rules[] = {
     {"firefox",                 NULL, NULL, 1 << 1, 0, -1},
     {"eudic",                   NULL, NULL, 1 << 2, 0, -1},
     {"Localsend",               NULL, NULL, 1 << 2, 0, -1},
-    {"Zathura",                 NULL, NULL, 1 << 3, 0, -1},
+    {"org.pwmt.zathura",        NULL, NULL, 1 << 3, 0, -1},
     {"calibre",                 NULL, NULL, 1 << 3, 0, -1},
     {"Foliate",                 NULL, NULL, 1 << 3, 0, -1},
     {"wechat",                  NULL, NULL, 1 << 4, 0, -1},
