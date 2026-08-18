@@ -60,6 +60,7 @@ static const Rule rules[] = {
     {"calibre",                 NULL, NULL, 1 << 3, 0, -1},
     {"Foliate",                 NULL, NULL, 1 << 3, 0, -1},
     {"wechat",                  NULL, NULL, 1 << 4, 0, -1},
+    {"wemeetapp",               NULL, NULL, 1 << 4, 0, -1},
     {"jetbrains-toolbox",       NULL, NULL, 1 << 5, 1, -1},
     {"jetbrains-studio",        NULL, NULL, 1 << 5, 0, -1},
     {"jetbrains-idea",          NULL, NULL, 1 << 5, 0, -1},
@@ -67,12 +68,10 @@ static const Rule rules[] = {
     {"Lutris",                  NULL, NULL, 1 << 5, 0, -1},
     {"gamescope",               NULL, NULL, 1 << 5, 0, -1},
     {"explorer.exe",            NULL, NULL, 1 << 5, 0, -1},
-    {"wemeetapp",               NULL, NULL, 1 << 6, 0, -1},
     {"Virt-manager",            NULL, NULL, 1 << 6, 0, -1},
     {"winboat",                 NULL, NULL, 1 << 6, 0, -1},
     {"KeePassXC",               NULL, NULL, 1 << 7, 0, -1},
     {"KeeWeb",                  NULL, NULL, 1 << 7, 0, -1},
-    {"Clash-verge",             NULL, NULL, 1 << 8, 0, -1},
 };
 
 /* layout(s) */
