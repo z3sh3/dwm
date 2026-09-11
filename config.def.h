@@ -34,8 +34,8 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-// static const char *tags[] = {"1 ", "2 󰇧", "3 󰘝", "4 ", "5 󰭹", "6 󰊖", "7 ", "8 󰒃", "9 󱘖"};
-static const char *tags[] = {"", "󰖟", "", "", "󰭹", "", "", "󰒃", "󱘖"};
+// static const char *tags[] = {"0 ", "1 󰖟", "2 󰭹", "3 ", "4 ", "5 ", "6 ", "7 󰒃", "8 󱘖"};
+static const char *tags[] = {"", "󰖟", "󰭹", "", "", "", "", "󰒃", "󱘖"};
 
 static const char ptagf[]  = "%s %s"; /* format of a tag label */
 static const char etagf[]  = "%s";    /* format of an empty tag */
@@ -52,16 +52,15 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
     {"Alacritty",               NULL, NULL, 1 << 0, 0, -1},
     {"firefox",                 NULL, NULL, 1 << 1, 0, -1},
-    {"wemeetapp",               NULL, NULL, 1 << 2, 0, -1},
-    {"eudic",                   NULL, NULL, 1 << 2, 0, -1},
-    {"Localsend",               NULL, NULL, 1 << 2, 0, -1},
-    {"org.mozilla.Thunderbird", NULL, NULL, 1 << 3, 0, -1},
-    {"Mail",                    NULL, NULL, 1 << 3, 0, -1},
-    {"org.pwmt.zathura",        NULL, NULL, 1 << 3, 0, -1},
-    {"calibre",                 NULL, NULL, 1 << 3, 0, -1},
-    {"Foliate",                 NULL, NULL, 1 << 3, 0, -1},
-    {"wpsoffice",               NULL, NULL, 1 << 3, 0, -1},
-    {"wechat",                  NULL, NULL, 1 << 4, 0, -1},
+    {"wechat",                  NULL, NULL, 1 << 2, 0, -1},
+    {"org.mozilla.Thunderbird", NULL, NULL, 1 << 2, 0, -1},
+    {"wemeetapp",               NULL, NULL, 1 << 3, 0, -1},
+    {"eudic",                   NULL, NULL, 1 << 3, 0, -1},
+    {"Localsend",               NULL, NULL, 1 << 3, 0, -1},
+    {"org.pwmt.zathura",        NULL, NULL, 1 << 4, 0, -1},
+    {"calibre",                 NULL, NULL, 1 << 4, 0, -1},
+    {"Foliate",                 NULL, NULL, 1 << 4, 0, -1},
+    {"wpsoffice",               NULL, NULL, 1 << 5, 0, -1},
     {"jetbrains-toolbox",       NULL, NULL, 1 << 5, 1, -1},
     {"jetbrains-studio",        NULL, NULL, 1 << 5, 0, -1},
     {"jetbrains-idea",          NULL, NULL, 1 << 5, 0, -1},
