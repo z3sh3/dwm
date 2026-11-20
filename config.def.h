@@ -60,6 +60,7 @@ static const Rule rules[] = {
     {"org.pwmt.zathura",        NULL, NULL, 1 << 4, 0, -1},
     {"calibre",                 NULL, NULL, 1 << 4, 0, -1},
     {"Foliate",                 NULL, NULL, 1 << 4, 0, -1},
+    {"Motrix",                  NULL, NULL, 1 << 4, 0, -1},
     {"wpsoffice",               NULL, NULL, 1 << 5, 0, -1},
     {"jetbrains-toolbox",       NULL, NULL, 1 << 5, 1, -1},
     {"jetbrains-studio",        NULL, NULL, 1 << 5, 0, -1},
