@@ -56,7 +56,7 @@ static const Rule rules[] = {
     {"org.mozilla.Thunderbird", NULL, NULL, 1 << 2, 0, -1},
     {"wemeetapp",               NULL, NULL, 1 << 3, 0, -1},
     {"eudic",                   NULL, NULL, 1 << 3, 0, -1},
-    {"Localsend",               NULL, NULL, 1 << 3, 0, -1},
+    {"LocalSend",               NULL, NULL, 1 << 3, 0, -1},
     {"org.pwmt.zathura",        NULL, NULL, 1 << 4, 0, -1},
     {"calibre",                 NULL, NULL, 1 << 4, 0, -1},
     {"Foliate",                 NULL, NULL, 1 << 4, 0, -1},
